@@ -1,0 +1,26 @@
+.App {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+
+  > header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+
+    > button {
+      height: 35px;
+    }
+
+    :nth-child(2) {
+      margin-left: auto;
+    }
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
