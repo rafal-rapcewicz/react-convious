@@ -1,4 +1,66 @@
+@import "../../constants";
+
 .Card {
-    height: 200px;
-    width: 100px;
+  position: relative;
+  height: 190px;
+  width: 100px;
+  display: flex;
+
+  > * {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__back {
+    cursor: pointer;
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: darkorchid;
+  }
+
+  &__front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: $dark_color;
+    font-size: xxx-large;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+
+  &.highlight {
+    .Card__front {
+      background-color: khaki;
+    }
+  }
+
+  &.spades {
+    .color::after {
+      content: "\2660";
+    }
+  }
+
+  &.hearts {
+    .color::after {
+      content: "\2665";
+      color: red;
+    }
+  }
+
+  &.diamonds {
+    .color::after {
+      content: "\2666";
+      color: red;
+    }
+  }
+
+  &.clubs {
+    .color::after {
+      content: "\2663";
+    }
+  }
 }
